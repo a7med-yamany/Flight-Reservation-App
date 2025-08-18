@@ -1,9 +1,12 @@
 from tkinter import *
+from booking import *
 
 home = Tk()
-home.state('zoomed')
 # basic start of the looking of the page
-home.geometry("800x600")
+
+home.state('zoomed')
+home.resizable(True, True)
+home.minsize(1300, 600)
 home.title("FlightMate")
 home.config(background=("#121316"))
 logo = PhotoImage (file="D:\Learn Python\Flight Reservation App\Flight-Reservation-App\images\logo.png")
@@ -39,7 +42,8 @@ bookButton = Button(bookingCard, text= 'Book Flight',
                     font=('Bodoni Moda', 15),
                     bg= '#C99200',
                     fg= '#2A2C33',
-                    activebackground='#E8AF11')
+                    activebackground='#E8AF11',
+                    command= openBookingWindow)
 bookButton.pack(padx= 10, pady= 10)
 
 # view reservation code
